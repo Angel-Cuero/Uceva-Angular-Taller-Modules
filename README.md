@@ -4,6 +4,19 @@
 
 - El objetivo del taller es practicar la creación y organización de módulos y componentes en una aplicación Angular.
 
+## 👥 Integrantes
+
+- **Angel Julian Juero Jimenez** (230231018)
+- **José Alejandro Loaiza López** (230231026)
+
+## 🚀 Cambios Recientes (Desarrollo del Taller)
+
+- Se crearon y enlazaron los módulos: **Arquitectura de Software**, **Principios de Arquitectura de Software** y **Sistemas de Diseño**.
+- Se configuró el **Lazy Loading** para los nuevos módulos en el archivo de rutas principal `app-routing-module.ts`.
+- Se integraron los accesos a los módulos desde la barra de navegación principal actualizando la configuración centralizada en `navbar.config.ts`.
+- Se implementó la página informativa en el módulo de Arquitectura de Software empleando tarjetas (cards) y Grid CSS para mejorar la experiencia de usuario y presentación visual.
+- Se documentó el nuevo componente usando el formato **JSDoc**.
+
 ## 📋 Requisitos Previos
 
 Antes de iniciar, asegúrate de tener instaladas las siguientes herramientas:
