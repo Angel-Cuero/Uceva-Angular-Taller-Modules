@@ -1,0 +1,28 @@
+<div class="card h-100 shadow-sm">
+	<div class="card-body">
+		<h5 class="card-title">
+			<app-badge [text]="principio.titulo" type="primary"></app-badge>
+		</h5>
+		<p class="card-text text-muted">{{ principio.descripcion }}</p>
+
+		<h6 class="mt-4 text-primary">Características</h6>
+		<ul class="list-unstyled mb-4">
+			@for (caracteristica of principio.caracteristicas; track caracteristica) {
+				<li>
+					<app-icon icon="check-circle" ></app-icon>
+					{{ caracteristica }}
+				</li>
+			}
+		</ul>
+
+		<h6 class="text-success">Beneficios</h6>
+		<ul class="list-unstyled mb-0">
+			@for (beneficio of principio.beneficios; track beneficio) {
+				<li>
+					<app-icon icon="star" ></app-icon>
+					{{ beneficio }}
+				</li>
+			}
+		</ul>
+	</div>
+</div>
