@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { ArquitecturaDeSoftwareRoutingModule } from './arquitectura-de-software-routing-module';
 import { InfoArquitectura } from './pages/info-arquitectura/info-arquitectura';
+import { CardArquitectura } from './components/card-arquitectura/card-arquitectura';
 
 
 @NgModule({
   declarations: [
-    InfoArquitectura
+    InfoArquitectura,
+    CardArquitectura
   ],
   imports: [
     CommonModule,
