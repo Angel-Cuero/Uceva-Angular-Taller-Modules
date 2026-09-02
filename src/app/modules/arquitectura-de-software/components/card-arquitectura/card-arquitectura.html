@@ -1,0 +1,24 @@
+<section class="info-card">
+  <div class="card-header">
+    <div class="icon-wrapper">
+      <i [class]="info.icon"></i>
+    </div>
+    <h2>{{ info.title }}</h2>
+  </div>
+  <div class="card-body">
+    <p>{{ info.content }}</p>
+    
+    <ng-container *ngIf="info.list && info.list.length > 0">
+      <ul *ngIf="!info.isOrderedList" class="styled-list">
+        <li *ngFor="let item of info.list">
+          <strong *ngIf="item.label">{{ item.label }}:</strong> {{ item.description }}
+        </li>
+      </ul>
+      <ol *ngIf="info.isOrderedList" class="styled-list ol">
+        <li *ngFor="let item of info.list">
+          {{ item.description }}
+        </li>
+      </ol>
+    </ng-container>
+  </div>
+</section>
