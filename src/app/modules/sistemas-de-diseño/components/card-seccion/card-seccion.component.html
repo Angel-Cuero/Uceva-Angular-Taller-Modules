@@ -1,0 +1,21 @@
+<div class="card shadow-sm mb-4">
+	<div class="card-header">
+		<h5 class="mb-0">
+			<app-badge [text]="seccion.titulo" type="info"></app-badge>
+		</h5>
+	</div>
+	<div class="card-body">
+		<p class="card-text text-muted fw-semibold">{{ seccion.descripcion }}</p>
+		<p class="card-text">{{ seccion.contenido }}</p>
+
+		<h6 class="mt-4 text-primary">Aspectos destacados</h6>
+		<ul class="list-unstyled mb-0">
+			@for (punto of seccion.puntos; track punto) {
+				<li>
+					<app-icon icon="check-circle" ></app-icon>
+					{{ punto }}
+				</li>
+			}
+		</ul>
+	</div>
+</div>
