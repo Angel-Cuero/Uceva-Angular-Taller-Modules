@@ -3,14 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'users',
-    loadChildren: () => import('./modules/users/users-module').then(m => m.UsersModule)
-  },
-  {
-    path: 'products',
-    loadChildren: () => import('./modules/products/products-module').then(m => m.ProductsModule)
-  },
-  {
     path: 'arquitectura-de-software',
     loadChildren: () => import('./modules/arquitectura-de-software/arquitectura-de-software-module').then(m => m.ArquitecturaDeSoftwareModule)
   },
@@ -24,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'users'
+    redirectTo: 'arquitectura-de-software'
   },
 ];
 
