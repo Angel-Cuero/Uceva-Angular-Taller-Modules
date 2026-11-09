@@ -47,14 +47,11 @@ jobs:
         run: npm test -- --ci
 
       # 6. Generar build de Angular con el base-href del repositorio
+      #    (las rutas usan hash, así que no hace falta fallback 404.html)
       - name: Build Angular
         run: npm run build -- --base-href "/${{ github.event.repository.name }}/"
 
-      # 7. Copiar index.html a 404.html para el fallback de rutas SPA
-      - name: Configure GitHub Pages fallback
-        run: cp "$BUILD_OUTPUT/index.html" "$BUILD_OUTPUT/404.html"
-
-      # 8. Subir artefacto generado
+      # 7. Subir artefacto generado
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
